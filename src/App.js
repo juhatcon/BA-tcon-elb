@@ -1,25 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
+import NavBar from './NavBar';
+import Empty from './pages/EmptyPage';
+import Detail from './pages/Detail';
+import Create from './pages/Create';
+import Overview from './pages/Overview'
+import Dashboard from './pages/Dashboard';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { ThemeProvider } from '@ui5/webcomponents-react/lib/ThemeProvider';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <ThemeProvider>
+        <Router>
+          <div>
+            <NavBar/>
+            <Switch>
+              <Route path="/" exact component={Overview} refresh/>
+              <Route path="/create"  component={Create} />
+              <Route path="/dashboard" exact component={Dashboard} />
+              <Route path="/detail/:id" component={Detail} />
+              <Route path="/" component={Empty} />
+            </Switch>
+          </div>
+        </Router>
+      </ThemeProvider>
   );
 }
 

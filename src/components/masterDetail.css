@@ -1,0 +1,47 @@
+.master {
+    border: none;
+    box-sizing: border-box;
+    border-right: 1px solid gray ;
+    scroll-behavior: smooth;
+    width: 30vw;
+    overflow-y: scroll;
+    height: 68vh;
+}
+
+.masterItem {
+    align-content: flex-start;
+    padding-left: 15px ;
+    padding-right: 15px ;
+}
+.masterItem:hover, .active-item{
+    background-color: rgb(229, 237, 253);
+    cursor: pointer;
+}
+
+.masterInfo {
+    background-color: transparent;
+    color: transparent;
+    width: 19vw;
+}
+.detail {
+    height: 68vh;
+    width: 80vw;
+}
+.titleHeader {
+    background: rgb(245, 250, 255);
+    border-bottom: 1px solid  rgb(228, 229, 235);
+    padding: 7pt;
+    text-align: center;
+}
+
+.detailHeader {
+    background: rgb(245, 250, 255);
+}
+
+.information {
+    padding-top: 7pt;
+}
+
+.attributeTable {
+    padding-left: 10vw;
+}
