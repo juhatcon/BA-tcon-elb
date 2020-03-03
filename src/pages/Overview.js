@@ -102,6 +102,7 @@ function Overview({ match }) {
 
     return (
         <div>
+            <Title>Make some Changes</Title>
             <FilterBar>
                 <FlexBox direction="Column" style={spacing.sapUiSmallMarginEnd}>
                     <Label>Meldung:</Label>
